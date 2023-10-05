@@ -3,6 +3,7 @@ import Employee from "./components/Employee";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import AddEmployee from "./components/AddEmployee";
+import Header from "./components/Header";
 
 function App() {
   const [role, setRole] = useState("Dev");
@@ -49,13 +50,10 @@ function App() {
   function updateEmployee(id, newName, newRole) {
     const updatedEmployees = employees.map((employee) => {
       if (id == employee.id) {
-        console.log("Coming!!");
         return { ...employee, name: newName, role: newRole };
       }
-      console.log("Not to if statement!");
       return employee;
     });
-    console.log(newName, newRole, "New inputs");
     setEmployees(updatedEmployees);
   }
 
@@ -73,18 +71,10 @@ function App() {
   const showEmployess = true;
 
   return (
-    <div className="flex flex-wrap">
+    <div className="App bg-gray-300 min-h-screen">
+      <Header />
       {showEmployess ? (
-        <>
-          <input
-            type="text"
-            name=""
-            id=""
-            onChange={(e) => {
-              console.log(e.target.value);
-              setRole(e.target.value);
-            }}
-          />
+        <div className="flex flex-wrap">
           <div className="flex flex-wrap justify-center">
             {employees.map((employee) => {
               return (
@@ -104,7 +94,7 @@ function App() {
             setShowModal={setShowModal}
             newEmployee={newEmployee}
           />
-        </>
+        </div>
       ) : (
         "No employees available!"
       )}
