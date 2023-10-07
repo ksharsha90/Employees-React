@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Employees from "./pages/Employees";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Customers from "./pages/Customers";
+import Dictionary from "./pages/Dictionary";
+import Definition from "./pages/Definition";
 
 function App() {
   // const [showModal, setShowModal] = useState(false);
@@ -102,7 +104,9 @@ function App() {
       <Header>
         <Routes>
           <Route path="/employees" element={<Employees />}></Route>
-          <Route path="/customers" element={<Customers />} ></Route>
+          <Route path="/customers" element={<Customers />}></Route>
+          <Route path="/definition/:search" element={<Definition />}></Route>
+          <Route path="/dictionary" element={<Dictionary />}></Route>
         </Routes>
         </Header>
       </BrowserRouter>

@@ -9,8 +9,6 @@ export default function AddEmployee(props) {
   const [role, setRole] = useState("");
   const [img, setImg] = useState("");
 
-  console.log(props, "data")
-
   const cancelButtonRef = useRef(null);
 
   return (

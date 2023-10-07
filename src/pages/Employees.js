@@ -1,4 +1,4 @@
-import '../index'
+import '../index.css'
 import Employee from '../components/Employee';
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -64,7 +64,6 @@ function Employees() {
       role: role,
       img: img,
     };
-    console.log(newEmployee, "newEmployee")
     setEmployees([ ...employees, newEmployee ]);
   }
 

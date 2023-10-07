@@ -3,7 +3,6 @@ import EditEmployee from "./EditEmployee";
 
 function Employee(props) {
   const [showModal, setShowModal] = useState(false);
-  console.log(props, "props")
 
   return (
     <div className="py-8 m-2 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
