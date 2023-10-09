@@ -6,6 +6,7 @@ import Customers from "./pages/Customers";
 import Dictionary from "./pages/Dictionary";
 import Definition from "./pages/Definition";
 import NotFound from "./components/NotFound";
+import Customer from "./pages/Customer";
 
 function App() {
   // const [showModal, setShowModal] = useState(false);
@@ -59,8 +60,7 @@ function App() {
   // }
 
   // function newEmployee(name, role, img) {
-  //   const newEmployee = {
-  //     id: uuidv4(),
+  //   const newEmployee = {  //     id: uuidv4(),
   //     name: name,
   //     role: role,
   //     img: img,
@@ -106,6 +106,7 @@ function App() {
         <Routes>
           <Route path="/employees" element={<Employees />}></Route>
           <Route path="/customers" element={<Customers />}></Route>
+          <Route path="/customers/:id" element={<Customer />}></Route>
           <Route path="/dictionary/:search" element={<Definition />}></Route>
           <Route path="/dictionary" element={<Dictionary />}></Route>
           <Route path="/404" element={<NotFound />}></Route>
